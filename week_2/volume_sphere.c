@@ -1,25 +1,41 @@
 /*
  *
- * volume_sphere.c
  *
- * Author: Marcio Woitek --- E-mail: woitek@usp.br
+ * ██╗    ██╗ ██████╗ ██╗████████╗███████╗██╗  ██╗
+ * ██║    ██║██╔═══██╗██║╚══██╔══╝██╔════╝██║ ██╔╝
+ * ██║ █╗ ██║██║   ██║██║   ██║   █████╗  █████╔╝
+ * ██║███╗██║██║   ██║██║   ██║   ██╔══╝  ██╔═██╗
+ * ╚███╔███╔╝╚██████╔╝██║   ██║   ███████╗██║  ██╗
+ *  ╚══╝╚══╝  ╚═════╝ ╚═╝   ╚═╝   ╚══════╝╚═╝  ╚═╝
  *
- * This program reads the radius of a sphere
- * from the standard input, and
- * returns the corresponding volume.
+ *
+ *
+ *  ______
+ * /\  ___\
+ * \ \ \____
+ *  \ \_____\
+ *   \/_____/
+ *
+ *
+ *
+ * This program reads the radius of a sphere, and returns the corresponding
+ * volume.
+ *
  *
  */
 
-#include <stdio.h>
 #include <math.h>
+#include <stdio.h>
 
-#define PI 3.14159
+#define PI 3.1415926535
 
 int main()
-  {
-    double radius;
-    printf("Enter radius: ");
+{
+    double radius, volume;
+
+    printf("Enter the radius of the sphere: ");
     scanf("%lf", &radius);
-    printf("The volume is %lf\n", (4.0 / 3.0) * PI * pow(radius, 3.0));
+    volume = (4.0 / 3.0) * PI * pow(radius, 3.0);
+    printf("The volume of the sphere of radius %lf is %.10lf\n", radius, volume);
     return 0;
-  }
+}
